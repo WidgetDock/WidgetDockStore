@@ -37,6 +37,7 @@
     }
     body {
       margin: 0;
+      margin-bottom: 100px;
       padding: 0;
       overflow-x: hidden;
       font-smooth: always;
@@ -597,7 +598,7 @@
       box-shadow: 0 12px 60px 0 rgba(44,134,246,0.08);
       border: 1.4px solid var(--glass-border);
       margin-top: 17px;
-      margin-bottom: 40px;
+      margin-bottom: 70px;
       position:relative;
     }
     .about-heading {
@@ -605,6 +606,7 @@
       color: var(--brand2);
       font-weight: 600;
       margin-bottom: 12px;
+      margin-top: 22px;
       letter-spacing: -0.01em;
     }
     .about-desc {
@@ -733,8 +735,6 @@
       <a href="#home" class="active">Home</a>
       <a href="#featured">Featured Widgets</a>
       <a href="#categories">Categories</a>
-      <a href="#upload">Upload Widget</a>
-      <a href="#community">Community</a>
       <a href="#about">About</a>
     </div>
     <button class="nav__burger" id="navBurger" aria-label="Open menu">
@@ -781,71 +781,6 @@
     </div>
     <div class="widgets-grid" id="categoryWidgets">
       <!-- filtered widget cards -->
-    </div>
-  </section>
-
-  <!-- Screenshots/Examples -->
-  <section id="screenshots" class="section fadein">
-    <div class="section__heading"><i class="fa fa-image"></i> Widget Examples</div>
-    <div class="screenshots-grid" id="screenshotsGrid">
-      <!-- demo mockups here -->
-    </div>
-  </section>
-
-  <!-- Upload Widget -->
-  <section id="upload" class="section fadein">
-    <div class="section__heading"><i class="fa fa-upload"></i> Upload Your Widget</div>
-    <div class="upload-form-wrap">
-      <form class="upload-form" id="uploadForm" autocomplete="off">
-        <div class="form__group">
-          <label class="form__label" for="uf_name">Widget Name</label>
-          <input class="form__input" id="uf_name" type="text" name="name" maxlength="42" required placeholder="e.g. Modern Weather"/>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="uf_desc">Short Description</label>
-          <textarea class="form__textarea" id="uf_desc" name="desc" maxlength="120" required placeholder="1-2 line description"></textarea>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="uf_category">Category</label>
-          <select class="form__select" id="uf_category" name="category" required>
-            <option value="">Choose…</option>
-            <option value="Dock">Dock</option>
-            <option value="System">System</option>
-            <option value="Calendar">Calendar</option>
-            <option value="Weather">Weather</option>
-            <option value="Music">Music</option>
-            <option value="Productivity">Productivity</option>
-            <option value="Status">Status</option>
-            <option value="Utilities">Utilities</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="uf_download">Download URL</label>
-          <input class="form__input" id="uf_download" type="url" name="download" required placeholder="Widget release or repository URL"/>
-        </div>
-        <button class="btn form__submit" type="submit"><i class="fa fa-paper-plane"></i> Submit Widget</button>
-        <div id="uploadSuccess" style="display:none"></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section id="community" class="section fadein">
-    <div class="section__heading"><i class="fa fa-comment-alt"></i> Community Voices</div>
-    <div class="community-wrap">
-      <div class="reviews-list" id="reviewsList">
-        <!-- community reviews/testimonials from js -->
-      </div>
-      <div class="community-links">
-        <div style="font-weight:700;font-size:1.11em;color:var(--brand);margin-bottom:14px;">
-          <i class="fa fa-rocket"></i>
-          Join &amp; Connect
-        </div>
-        <a class="community-link" href="https://discord.gg/pock" target="_blank"><i class="fab fa-discord"></i> Discord Community</a>
-        <a class="community-link" href="https://github.com/pock" target="_blank"><i class="fab fa-github"></i> Github Repository</a>
-        <a class="community-link" href="https://www.reddit.com/r/PockApp/" target="_blank"><i class="fab fa-reddit"></i> Reddit /r/PockApp</a>
-      </div>
     </div>
   </section>
 
@@ -1049,81 +984,6 @@
         `<div style="color:#abefde;font-size:1.17em;font-weight:600;grid-column:1/-1;padding: 35px 0;text-align:center;opacity:0.78;">No widgets found for "${selectedCat}"</div>`;
     }
 
-    // --- Screenshots/examples ---
-    const demoScreenshots = [
-      {
-        img: "https://i.imgur.com/GLCv53v.png",
-        title: "Weather Glass - Dock Widget"
-      },
-      {
-        img: "https://i.imgur.com/dHBYvcl.png",
-        title: "Modern Music - Now Playing"
-      },
-      {
-        img: "https://i.imgur.com/XKQOV4J.png",
-        title: "Battery Status+"
-      },
-      {
-        img: "https://i.imgur.com/31dkRD3.png",
-        title: "Calendar Peek"
-      },
-      {
-        img: "https://i.imgur.com/V9Phh0V.png",
-        title: "World Clocks"
-      },
-      {
-        img: "https://i.imgur.com/TwLVeXk.png",
-        title: "Now Charging Animation"
-      }
-    ];
-    function renderScreenshots(){
-      document.getElementById("screenshotsGrid").innerHTML = demoScreenshots.map(sc => `
-        <div class="screenshot-card" tabindex="0" aria-label="Widget screenshot">
-          <img class="screenshot-mock" src="${sc.img}" alt="${sc.title} screenshot" />
-          <div class="screenshot-title">${sc.title}</div>
-        </div>
-      `).join('');
-    }
-
-    // --- Community reviews/testimonials ---
-    const demoReviews = [
-      {
-        name: "Marie R.",
-        txt: "WidgetDock made my MacBook Dock feel like an iPhone Home Screen – beautiful, practical, and touchable. I love the Weather Glass widget!",
-        stars: 5
-      },
-      {
-        name: "CodeTiger",
-        txt: "As a Pock widget developer, deploying my widgets here is smooth. Community is welcoming and UI is top notch!",
-        stars: 5
-      },
-      {
-        name: "Tim S.",
-        txt: "The Dock Spaces widget literally saves me minutes every day. Amazing to see so many polished widgets for Pock in one elegant place.",
-        stars: 4
-      },
-      {
-        name: "Elena A.",
-        txt: "Sleek glassmorphism design! For indie widget explorers and productivity freaks, WidgetDock is a must visit.",
-        stars: 5
-      }
-    ];
-    function renderReviews() {
-      document.getElementById("reviewsList").innerHTML = demoReviews.map(r=>{
-        let initials = r.name.split(' ').map(x=>x[0]).join('').substring(0,2).toUpperCase();
-        let stars = '★'.repeat(r.stars)+'<span style="color:#27e9ec;">'+'☆'.repeat(5-r.stars)+'</span>';
-        return `
-        <div class="review-card">
-          <div class="review-ava">${initials}</div>
-          <div class="review-content">
-            <div class="review-name">${r.name}</div>
-            <div class="review-stars">${stars}</div>
-            <div class="review-text">${r.txt}</div>
-          </div>
-        </div>`;
-      }).join('');
-    }
-
 
     // --- MODAL Popup for widget card info ----
     function showWidgetModal(widgetName){
@@ -1166,18 +1026,6 @@
         }
       });
     }
-
-
-    // --- Upload form fake submission ---
-    document.getElementById("uploadForm").onsubmit = function(e){
-      e.preventDefault();
-      document.getElementById("uploadSuccess").style.display = "block";
-      document.getElementById("uploadSuccess").innerHTML = `<span class="form__success"><i class="fa fa-check"></i> Your widget has been submitted! 🎉</span>`;
-      setTimeout(()=>{document.getElementById("uploadSuccess").style.display="none";}, 4200);
-      this.reset();
-    }
-
-
     // --- NAV Smooth scroll & mobile burger ---
     // Navbar sticky on scroll
     window.addEventListener('scroll',()=>{
@@ -1275,8 +1123,6 @@
       renderFeaturedWidgets();
       renderCategoryFilters("All");
       renderCategoryWidgets("All");
-      renderScreenshots();
-      renderReviews();
       fadeinObserve();
       heroBGAnim();
       enableWidgetCardModals();
