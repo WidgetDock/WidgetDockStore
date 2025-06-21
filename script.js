@@ -126,11 +126,11 @@
         tags: ["Utilities", "Dock"],
         icon: '<i class="fa fa-adjust"></i>',
         color: 'linear-gradient(120deg,#181928 10%,#3bfadb 186%)',
-        download: "https://github.com/WidgetDock/darkmode-toggle",
+        download: "https://github.com/WidgetDock/darkmode-toggle/releases/tag/v1.0",
         screenshot: "https://i.imgur.com/ttml7U0.png",
         featured: false,
         category: "Utilities",
-        locked: true
+        locked: false
       },
       {
         name: "Now Charging Animation",
