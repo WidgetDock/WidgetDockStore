@@ -152,9 +152,9 @@
     function createWidgetCard(widget, allowModal = true) {
         const isLocked = widget.locked || widget.ready === false;
         return `
-        <div class="widget-card${allowModal ? ' widget-card-selectable' : ''} ${isLocked ? 'widget-card--locked' : ''}" tabindex="0" style="--card-accent:${widget.color}" data-name="${widget.name.replace(/"/g,'&quot;')}">
+        <div class="widget-card${(allowModal && !isLocked) ? ' widget-card-selectable' : ''} ${isLocked ? 'widget-card--locked' : ''}" tabindex="0" style="--card-accent:${widget.color}" data-name="${widget.name.replace(/"/g,'&quot;')}">
             <div class="widget-card__icon" style="background:${widget.color}">${widget.icon}</div>
-            <div class="widget-card__title">${widget.name}${isLocked ? ' <span style="font-size:0.7em;opacity:0.6">(Locked)</span>' : ''}</div>
+            <div class="widget-card__title">${widget.name}${isLocked ? ' <span style="font-size:0.7em;opacity:0.6">(Coming Soon)</span>' : ''}</div>
             <div class="widget-card__desc">${widget.desc}</div>
             <div class="widget-card__tags">
             ${widget.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
@@ -188,13 +188,19 @@
     function showWidgetModal(widgetName){
       let widget = widgetData.find(w=>w.name===widgetName);
       if(!widget) return;
+      
+      const isLocked = widget.locked || widget.ready === false;
+      
       document.getElementById("modalWidgetTitle").textContent = widget.name;
       document.getElementById("modalWidgetDesc").textContent = widget.desc;
       document.getElementById("modalWidgetExtra").innerHTML = `
         <div class="widget-card__tags" style="margin-bottom:15px">
           ${widget.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
-        <a href="${widget.download}" class="btn"><i class="fa fa-download"></i> Download</a>
+        ${isLocked ? 
+          '<div class="btn btn--glass btn--disabled"><i class="fa fa-lock"></i> Coming Soon</div>' : 
+          `<a href="${widget.download}" class="btn"><i class="fa fa-download"></i> Download</a>`
+        }
       `;
       document.getElementById("widgetModal").classList.add("open");
     }

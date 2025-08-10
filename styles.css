@@ -335,6 +335,25 @@
       margin-top: 2px;
     }
 
+    /* Locked widget styles */
+    .widget-card--locked {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .widget-card--locked:hover, .widget-card--locked:focus {
+      transform: none;
+      box-shadow: var(--shadow-card);
+    }
+    .btn--disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .btn--disabled:hover {
+      transform: none;
+      box-shadow: 0 4px 20px 0 rgba(43,159,255,0.05);
+    }
+
     /* Categories */
     .category-filters {
       display: flex;
