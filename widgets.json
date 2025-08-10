@@ -1,0 +1,149 @@
+{
+  "widgets": [
+    {
+      "name": "Modern Music",
+      "desc": "Elegant music controller for Apple Music & Spotify in your Dock. Album artwork, like/shuffle, current song, and more.",
+      "tags": ["Music", "Dock", "Now Playing"],
+      "icon": "<i class=\"fa fa-music\"></i>",
+      "color": "linear-gradient(120deg,#7e57fe 48%,#3ecfff 151%)",
+      "download": "https://github.com/WidgetDock/music-widget",
+      "screenshot": "https://i.imgur.com/dHBYvcl.png",
+      "featured": true,
+      "category": "Music",
+      "locked": true
+    },
+    {
+      "name": "Weather Glass",
+      "desc": "Beautiful, glassy Dock widget for live Weather & forecasts. Retina-ready, with dynamic backgrounds.",
+      "tags": ["Weather", "Dock"],
+      "icon": "<i class=\"fa fa-cloud-sun\"></i>",
+      "color": "linear-gradient(120deg,#6be8fa 34%,#3396ff 140%)",
+      "download": "https://github.com/WidgetDock/weather-glass",
+      "screenshot": "https://i.imgur.com/GLCv53v.png",
+      "featured": true,
+      "category": "Weather",
+      "locked": true
+    },
+    {
+      "name": "Calendar Peek",
+      "desc": "Pops up your iCloud and Google calendar events, days, and invites in a native macOS look.",
+      "tags": ["Calendar", "Productivity"],
+      "icon": "<i class=\"fa fa-calendar-alt\"></i>",
+      "color": "linear-gradient(120deg,#8df3c9 12%,#417acf 138%)",
+      "download": "https://github.com/WidgetDock/calendar-peek",
+      "screenshot": "https://i.imgur.com/31dkRD3.png",
+      "featured": true,
+      "category": "Calendar",
+      "locked": true
+    },
+    {
+      "name": "Battery Status+",
+      "desc": "Monitor MacBook battery health and charging status from your Dock, with real-time percentage and notifications.",
+      "tags": ["System", "Status"],
+      "icon": "<i class=\"fa fa-battery-three-quarters\"></i>",
+      "color": "linear-gradient(120deg,#fcfe6b 12%,#6bb96e 128%)",
+      "download": "https://github.com/WidgetDock/battery-status",
+      "screenshot": "https://i.imgur.com/XKQOV4J.png",
+      "featured": true,
+      "category": "System",
+      "locked": true
+    },
+    {
+      "name": "Dock Spaces",
+      "desc": "Quickly jump between Mission Control spaces from your Dock. See all your desktops and windows.",
+      "tags": ["Dock", "Productivity"],
+      "icon": "<i class=\"fa fa-th-large\"></i>",
+      "color": "linear-gradient(120deg,#9ecbfa 39%,#1affcf 191%)",
+      "download": "https://github.com/WidgetDock/spaces-widget",
+      "screenshot": "https://i.imgur.com/GHgSmEY.png",
+      "featured": true,
+      "category": "Dock",
+      "locked": true
+    },
+    {
+      "name": "System Monitor",
+      "desc": "Live CPU, RAM, and system stats — gorgeous animated graphs right on your Dock.",
+      "tags": ["System", "Utilities"],
+      "icon": "<i class=\"fa fa-microchip\"></i>",
+      "color": "linear-gradient(120deg,#ffda5b 35%,#34ffe4 172%)",
+      "download": "https://github.com/WidgetDock/system-monitor",
+      "screenshot": "https://i.imgur.com/G3vszTW.png",
+      "featured": true,
+      "category": "System",
+      "locked": true
+    },
+    {
+      "name": "World Clocks",
+      "desc": "Display multiple clocks from around the globe in modern macOS style.",
+      "tags": ["Utilities", "Productivity"],
+      "icon": "<i class=\"fa fa-clock\"></i>",
+      "color": "linear-gradient(120deg,#badcf9 37%,#13e3fb 186%)",
+      "download": "https://github.com/WidgetDock/world-clocks",
+      "screenshot": "https://i.imgur.com/V9Phh0V.png",
+      "featured": false,
+      "category": "Utilities",
+      "locked": true
+    },
+    {
+      "name": "Pomodoro Focus",
+      "desc": "A Pomodoro timer with break alerts and task tracking — for deep work right from your Dock.",
+      "tags": ["Productivity"],
+      "icon": "<i class=\"fa fa-hourglass-half\"></i>",
+      "color": "linear-gradient(120deg,#f5baff 6%,#9083ff 124%)",
+      "download": "https://github.com/WidgetDock/pomodoro-focus",
+      "screenshot": "https://i.imgur.com/eMGxU76.png",
+      "featured": false,
+      "category": "Productivity",
+      "locked": true
+    },
+    {
+      "name": "Bluetooth Manager",
+      "desc": "One-tap manage and connect devices from your Dock; battery info for AirPods and more.",
+      "tags": ["Utilities", "System"],
+      "icon": "<i class=\"fa fa-bluetooth-b\"></i>",
+      "color": "linear-gradient(120deg,#a7e7ff 62%,#446efa 172%)",
+      "download": "https://github.com/WidgetDock/bluetooth-manager",
+      "screenshot": "https://i.imgur.com/9HHXWH0.png",
+      "featured": false,
+      "category": "Utilities",
+      "locked": true
+    },
+    {
+      "name": "Now Playing Mini",
+      "desc": "Minimalist music info, works with any media app, super compact.",
+      "tags": ["Music", "Dock"],
+      "icon": "<i class=\"fa fa-headphones\"></i>",
+      "color": "linear-gradient(120deg,#ffa7ab 10%,#7adfe2 161%)",
+      "download": "https://github.com/WidgetDock/now-playing-mini",
+      "screenshot": "https://i.imgur.com/ELrcEZc.png",
+      "featured": false,
+      "category": "Music",
+      "locked": true
+    },
+    {
+      "name": "Dark Mode Switch",
+      "desc": "Switch macOS dark/light modes directly from the Dock with gorgeous animated toggle.",
+      "tags": ["Utilities", "Dock"],
+      "icon": "<i class=\"fa fa-adjust\"></i>",
+      "color": "linear-gradient(120deg,#181928 10%,#3bfadb 186%)",
+      "download": "https://github.com/WidgetDock/darkmode-toggle/releases/tag/v1.0",
+      "screenshot": "https://i.imgur.com/ttml7U0.png",
+      "featured": false,
+      "category": "Utilities",
+      "locked": false
+    },
+    {
+      "name": "Now Charging Animation",
+      "desc": "Animated charging effects for battery status, inspired by iOS charging lock-screen.",
+      "tags": ["Status", "System"],
+      "icon": "<i class=\"fa fa-bolt\"></i>",
+      "color": "linear-gradient(120deg,#fafe65 26%,#56f6bf 91%)",
+      "download": "https://github.com/WidgetDock/charging-animation",
+      "screenshot": "https://i.imgur.com/TwLVeXk.png",
+      "featured": false,
+      "category": "Status",
+      "locked": true
+    }
+  ],
+  "categories": ["All", "Dock", "System", "Utilities", "Productivity", "Weather", "Music", "Calendar", "Status"]
+}
